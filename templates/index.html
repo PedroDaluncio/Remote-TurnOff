@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desligar Computador</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <button onclick=(handleDesligarComputador())>
+        Desligar Computador
+    </button>
+    <script>
+        async function handleDesligarComputador(){
+            await fetch('http://192.168.0.126:5000/turn_off')
+        }
+    </script>
+</body>
+</html>
